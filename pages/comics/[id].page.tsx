@@ -112,9 +112,9 @@ const Comic: NextPage<Props> = ({ comic }) => {
                 >
                   Personajes
                 </AccordionSummary>
-                {comic.characters && comic.characters.items.map((character : IItem)=> {
+                {comic.characters && comic.characters.items.map((character : IItem, key)=> {
                   return (
-                  <AccordionDetails>
+                  <AccordionDetails key={key}>
                     <NextLink href={"http://localhost:3000/characters/"+getIdFromResourceURI(character.resourceURI)}>{character.name}</NextLink>
                   </AccordionDetails>
                   )

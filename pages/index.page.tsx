@@ -62,8 +62,8 @@ const Index: NextPage<Props> = ({ comics }) => {
                 <Grid container columns={3} spacing={2}>
                     { 
                     comicsData !== undefined ?
-                    comicsData.data.results.map((comic ) => <Grid item xs={1}><CardComponent comic={comic}/></Grid>) :
-                    comics?.data.results.map((comic) =>  <Grid item xs={1}><CardComponent comic={comic}/></Grid>)
+                    comicsData.data.results.map((comic, key ) => <Grid key={key} item xs={1}><CardComponent comic={comic}/></Grid>) :
+                    comics?.data.results.map((comic, key) =>  <Grid key={key} item xs={1}><CardComponent comic={comic}/></Grid>)
                     }
                 </Grid>
                 <Pagination count={totalPages} onChange={handleChange}/>
