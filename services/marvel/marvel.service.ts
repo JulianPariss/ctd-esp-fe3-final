@@ -18,7 +18,7 @@ export const getComics = async (offset?: number, limit?: number) => {
 
 export const getComic = async (comicId: number) => {
     const data = await fetchApi(`comics/${comicId}`);
-    const results = data.data.results;
+    const results = data?.data?.results;
     if (results.length > 0) {
         const comic = results[0];
         if (`${comic.id}`.endsWith('0')) {
