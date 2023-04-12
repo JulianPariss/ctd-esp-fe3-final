@@ -4,7 +4,7 @@ import {
     ERROR_BAD_REQUEST,
     ERROR_INVALID_CREDENTIALS,
     ERROR_SERVER,
-} from "dh-marvel/services/marvel/marvel.errors";
+} from "dh-marvel/services/comic/comic.errors";
 import { getComics } from "dh-marvel/services/marvel/marvel.service";
 import { IComicResponse } from "types/IComic.type";
 
