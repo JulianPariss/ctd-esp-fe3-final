@@ -23,14 +23,14 @@ const CardComicDetails: NextPage<Props> = ({ comic }) => {
         paddingBottom: "30px",
       }}
     >
-      <Typography gutterBottom variant="subtitle1" component="div">
+      <Typography gutterBottom component="div">
         Serie: {comic?.series.name}
       </Typography>
       <Typography gutterBottom variant="h5">
         {comic?.title}
       </Typography>
       {comic?.isbn !== "" && (
-        <Typography gutterBottom variant="subtitle1" component="div">
+        <Typography gutterBottom component="div">
           ISBN: {comic?.isbn}
         </Typography>
       )}
