@@ -69,7 +69,7 @@ const Comic: NextPage<Props> = ({ comic }) => {
                 paddingBottom: "90px",
               }}
             >
-              {comic.stock > 0 ? (
+              {comic?.stock > 0 ? (
                 <NextLink
                   href={{ pathname: "/checkout/", query: `comic=${comic?.id}` }}
                 >
