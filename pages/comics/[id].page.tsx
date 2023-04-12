@@ -129,9 +129,9 @@ const Comic: NextPage<Props> = ({ comic }) => {
                   Creadores
                 </AccordionSummary>
                 {
-                comic && comic.creators.items.map((creators : IItem)=> {
+                comic && comic.creators.items.map((creators : IItem, key)=> {
                   return (
-                  <AccordionDetails>
+                  <AccordionDetails key={key}>
                     <Typography>
                       {creators.name}
                     </Typography>
