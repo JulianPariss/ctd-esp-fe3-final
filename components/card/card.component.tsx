@@ -9,27 +9,12 @@ import { Box } from "@mui/material";
 import { IComic } from "types/IComic.type";
 import NextLink from "next/link";
 import { useRouter } from "next/router";
-import { getComic } from "dh-marvel/services/marvel/marvel.service";
 
 interface Props {
     comic: IComic;
 }
 
 const CardComponent: FC<Props> = ({ comic }) => {
-    const router = useRouter();
-
-    const handleBuy = async (id: number) => {
-    const response: IComic = await getComic(id);
-
-    if (response.stock > 0) {
-        router.push({
-        pathname: "/checkout",
-        query: { comic: comic.id },
-        });
-    } else {
-        router.push(`/comics/${id}`);
-    }
-};
 
 return (
     <Card sx={{maxHeigth : 500}}>
@@ -50,9 +35,9 @@ return (
             <NextLink href={`/comics/${comic.id}`}>
                 <Button>Ver detalles</Button>
             </NextLink>
-            <Button onClick={() => handleBuy(comic.id)}>
+            <NextLink href={`/checkout?comic=${comic.id}`} >
             COMPRAR
-            </Button>
+            </NextLink>
         </CardActions>
     </Card>
 );

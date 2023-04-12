@@ -27,7 +27,7 @@ const Comic: NextPage<Props> = ({ comic }) => {
         <title>DH-MARVEL</title>
         <meta
           name="description"
-          content={`Comic de Marvel.${comic.title}.${comic.series}`}
+          content={`Comic de Marvel.${comic?.title}.${comic?.series}`}
         />
       </Head>
       <Stack
@@ -51,8 +51,8 @@ const Comic: NextPage<Props> = ({ comic }) => {
             >
               <Box
                 component="img"
-                alt={comic.title}
-                src={`${comic.thumbnail.path}.${comic.thumbnail.extension}`}
+                alt={comic?.title}
+                src={`${comic?.thumbnail.path}.${comic?.thumbnail.extension}`}
                 sx={{
                   boxShadow: "0.2px 0.2px 10px rgba(0,0,0,0.2)",
                   margin: "auto",
@@ -71,7 +71,7 @@ const Comic: NextPage<Props> = ({ comic }) => {
             >
               {comic.stock > 0 ? (
                 <NextLink
-                  href={{ pathname: "/checkout/", query: `comic=${comic.id}` }}
+                  href={{ pathname: "/checkout/", query: `comic=${comic?.id}` }}
                 >
                   <Button
                     endIcon={<AddShoppingCartOutlinedIcon />}
@@ -99,7 +99,7 @@ const Comic: NextPage<Props> = ({ comic }) => {
                 </AccordionSummary>
                 <AccordionDetails>
                 <Typography>
-                  {comic.description === null ? comic.description : "No cuenta con una descripcion"}
+                  {comic?.description === null ? comic?.description : "No cuenta con una descripcion"}
                 </Typography>
                 </AccordionDetails>
               </Accordion>
@@ -111,10 +111,10 @@ const Comic: NextPage<Props> = ({ comic }) => {
                 >
                   Personajes
                 </AccordionSummary>
-                {comic.characters && comic.characters.items.map((character : IItem, key)=> {
+                {comic?.characters && comic?.characters.items.map((character : IItem, key)=> {
                   return (
                   <AccordionDetails key={key}>
-                    <NextLink href={"http://localhost:3000/characters/"+getIdFromResourceURI(character.resourceURI)}>{character.name}</NextLink>
+                    <NextLink href={"http://localhost:3000/characters/"+getIdFromResourceURI(character?.resourceURI)}>{character?.name}</NextLink>
                   </AccordionDetails>
                   )
                 })}
@@ -128,11 +128,11 @@ const Comic: NextPage<Props> = ({ comic }) => {
                   Creadores
                 </AccordionSummary>
                 {
-                comic && comic.creators.items.map((creators : IItem, key)=> {
+                comic && comic?.creators.items.map((creators : IItem, key)=> {
                   return (
                   <AccordionDetails key={key}>
                     <Typography>
-                      {creators.name}
+                      {creators?.name}
                     </Typography>
                   </AccordionDetails>
                   )
