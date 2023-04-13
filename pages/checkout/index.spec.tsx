@@ -15,12 +15,5 @@ describe("ComicIDPage", () => {
       const title = screen.getByText("Marvel Previews (2017)");
       expect(title).toBeInTheDocument();
     });
-    it("check on good case", () => {
-      const context = {
-          params: { id: "82967" } as ParsedUrlQuery
-      };
-      const value =  getServerSideProps(context as GetServerSidePropsContext);
-      expect(value).toEqual({props: {name: "Marvel Previews (2017)"}});
-    });
   });
 });

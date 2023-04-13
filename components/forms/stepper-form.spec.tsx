@@ -7,19 +7,14 @@ describe("StepperForm component", () => {
   describe("when rendering default", () => {
     it("should render all the data", () => {
       renderWithReactHookForm(<StepperForm comic={comicMock} />);
-      const steps = [
-        "Datos Personales",
-        "Dirección de entrega",
-        "Datos del pago",
-      ];
 
-      const stepperDataI = screen.getByText("Datos Personales");
-      const stepperDataII = screen.getByText("Dirección de entrega");
-      const stepperDataIII = screen.getByText("Datos del pago");
+      const stepperDataP = screen.getByText("Datos Personales");
+      const stepperDataDE = screen.getByText("Dirección de entrega");
+      const stepperDataDP = screen.getByText("Datos del pago");
 
-      expect(stepperDataI).toBeInTheDocument();
-      expect(stepperDataII).toBeInTheDocument();
-      expect(stepperDataIII).toBeInTheDocument();
+      expect(stepperDataP).toBeInTheDocument();
+      expect(stepperDataDE).toBeInTheDocument();
+      expect(stepperDataDP).toBeInTheDocument();
     });
   });
 });

@@ -46,7 +46,6 @@ const CardSuccessCheckout: FC<CardSuccessCheckoutProps> = ({ data }) => {
             sx={{
               maxWidth: 500,
               width: "100%",
-              border: "3px solid #000",
             }}
           />
         </Box>
