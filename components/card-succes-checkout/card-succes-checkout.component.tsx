@@ -18,7 +18,6 @@ const CardSuccessCheckout: FC<CardSuccessCheckoutProps> = ({ data }) => {
         alignItems: "center",
         padding: { xs: "20px", sm: "50px 90px" },
         background: "#fcfcfc",
-        boxShadow: "12px 12px #000",
       }}
     >
       <CheckCircleOutlineIcon
