@@ -1,10 +1,6 @@
-export type FaqsType = {
-    id: number,
-    question: string,
-    answer: string,
-}
+import IFaq from "../../types/IFaq.type"
 
-export const faqsData: FaqsType[] = [
+export const faqsData: IFaq[] = [
     {
         "id": 1,
         "question": "¿Cuántos comics tienen?",

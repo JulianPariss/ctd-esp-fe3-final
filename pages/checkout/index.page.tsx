@@ -38,7 +38,6 @@ return (
 
 export const getServerSideProps : GetServerSideProps = async ( context : GetServerSidePropsContext ) => {
     const id = context.query?.comic?.toString() || "0";
-    console.log(id);
     const comic =  await getComic(parseInt(id))
     return {props: { comic }};
 }

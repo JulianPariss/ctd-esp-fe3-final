@@ -12,27 +12,27 @@ describe("CardSuccessCheckout component", () => {
     });
     it("should render the comic title", () => {
       render(<CardSuccessCheckout data={checkoutMocked as ICheckout} />);
-      const title = screen.getByText("Marvel Previews (2017)");
+      const title = screen.getByText("Ant-Man (2003) #4");
       expect(title).toBeInTheDocument();
     });
     it("should render the card image", () => {
       render(<CardSuccessCheckout data={checkoutMocked as ICheckout} />);
-      const image = screen.getByAltText("Marvel Previews (2017)");
+      const image = screen.getByAltText("Ant-Man (2003) #4");
       expect(image).toBeInTheDocument();
     });
     it("should render the customer name", () => {
       render(<CardSuccessCheckout data={checkoutMocked as ICheckout} />);
-      const customerName = screen.getByText(/Test/i);
+      const customerName = screen.getByText(/Julian/i);
       expect(customerName).toBeInTheDocument();
     });
     it("should render the address", () => {
       render(<CardSuccessCheckout data={checkoutMocked as ICheckout} />);
-      const address = screen.getByText(/Dirección: address 123/i);
+      const address = screen.getByText(/26 123/i);
       expect(address).toBeInTheDocument();
     });
     it("should render the address", () => {
       render(<CardSuccessCheckout data={checkoutMocked as ICheckout} />);
-      const address = screen.getByText(/Dirección alternativa: address 12345/i);
+      const address = screen.getByText(/35 12345/i);
       expect(address).toBeInTheDocument();
     });
   });

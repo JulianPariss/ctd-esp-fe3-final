@@ -2,6 +2,10 @@ export const comic = {
     id: 1,
 };
 
+export const comicError = {
+    id: 0,
+};
+
 export const comicMock = {
     id: 82967,
     digitalId: 0,
@@ -98,7 +102,7 @@ export const comicMock = {
         {
             type: "printPrice",
             price: 0,
-        },    
+        },
     ],
     thumbnail: {
         path: "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available",
@@ -112,7 +116,7 @@ export const comicMock = {
             {
                 resourceURI: "http://gateway.marvel.com/v1/public/creators/10021",
                 name: "Jim Nausedas",
-            role: "editor",
+                role: "editor",
             },
         ],
         returned: 1,
@@ -123,8 +127,8 @@ export const comicMock = {
             "http://gateway.marvel.com/v1/public/comics/82967/characters",
         items: [
             {
-            resourceURI: "http://gateway.marvel.com/v1/public/characters/1009610",
-            name: "Spider-Man (Peter Parker)",
+                resourceURI: "http://gateway.marvel.com/v1/public/characters/1009610",
+                name: "Spider-Man (Peter Parker)",
             },
         ],
         returned: 0,

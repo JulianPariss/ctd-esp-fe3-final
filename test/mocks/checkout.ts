@@ -1,26 +1,20 @@
 export const checkoutMocked = {
   customer: {
-    name: "Test",
-    lastname: "User",
-    email: "test@email.com",
+    name: "Julian",
+    lastname: "Paris",
+    email: "Julian@email.com",
     address: {
-      address1: "address 123",
-      address2: "address 12345",
-      city: "Rosario",
-      state: "Santa Fe",
-      zipCode: "2000",
+      address1: "26 123",
+      address2: "35 12345",
+      city: "La Plata",
+      state: "Buenos Aires",
+      zipCode: "1900",
     },
   },
-  // card: {
-  //   number: "4242424242424242",
-  //   cvc: "123",
-  //   expDate: "1223",
-  //   nameOnCard: "Test User",
-  // },
   order: {
-    name: "Marvel Previews (2017)",
+    name: "Ant-Man (2003) #4",
     image:
-      "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available.jpg",
+      "http://i.annihil.us/u/prod/marvel/i/mg/4/20/4bc697c680890.jpg",
     price: 50,
   },
 };
